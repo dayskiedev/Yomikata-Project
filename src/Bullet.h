@@ -8,7 +8,7 @@ struct Bullet {
 	// Texture bulletTexture
 
 	// Bullet constructor for spawning bullet
-	Bullet(float sX, float sY, float sSpeed);
+	Bullet(float sX, float sY, float iSpeed);
 
 	void Render();
 	void Update();

@@ -1,9 +1,2 @@
 
-// x y 
-// w h
-// shape?
-
-// onHit
-// active? (we want invincibility frames
-
-// attach to sprite, follow it around
+// we want hitbox to be seperate to texture, because most hitboxes should be smaller than texture

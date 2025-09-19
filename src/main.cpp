@@ -12,26 +12,18 @@ enum GAME_STATE
 	GAME
 };
 
-// define rectangle that has a position and size
-// just follows players position everywhere, that way we check collision between boxes and not the player
-// need some sort of spawener for projectiles from both the player and the enemy
-// enemy uses math n shit for spawning, delays between each attack, another fileformat?
-// enemy can spawn emitters that spawn bullets...
 
-// all bullets have a start position
-// and move a certain amount
-// ie they dissapear when they:
-// - hit the edge of the screen
-// - hit the player
-// - are caught in the blank (blowing them up)
+// TODO: A LOT
+// - BRING IN TEXTURE CLASS FROM SDLVN
+// - HAVE A PLAYER ON SCREEN
+// - MOVE THE PLAYER AROUND
+// - ADD DELTATIME EARLY
+// - HAVE PLAYER SPAWN BULLET
+// - HAVE AN ENEMY ON SCREEN
+// - HAVE ENEMY SPAWN BULLET
+// - PLAYER BULLET KILLS ENEMY, ENEMY BULLET KILLS PLAYER
 
-// enemy can spawn them
 
-// most basic enemy type:
-// - move down the screen in a straight line
-
-// most basic boss type:
-// - stick to the top of the screen and fire bullets that go straight down
 
 // the window we render to
 SDL_Window* gWindow = NULL;
@@ -53,7 +45,7 @@ bool init() {
 	}
 	else {
 		// Create window
-		gWindow = SDL_CreateWindow("SDL_Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+		gWindow = SDL_CreateWindow("Yomikata (ok weeb)", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 		gRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
 		SDL_SetRenderDrawColor(gRenderer, 255, 175, 222, 0xFF);
 		SDL_SetRenderDrawBlendMode(gRenderer, SDL_BLENDMODE_BLEND);
